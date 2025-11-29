@@ -1,0 +1,64 @@
+@mixin reset {
+  & * {
+    color: var(--preto);
+    font-family: "Montserrat", sans-serif;
+    line-height: 1;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+}
+
+@mixin section {
+  padding: 6.1rem 2rem;
+  display: flex;
+  flex-flow: column;
+  overflow: hidden;
+}
+
+@mixin flex($justify: start, $align: stretch, $flow: row, $gap: 0) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-flow: $flow;
+  gap: $gap;
+}
+
+@mixin grid($columns, $rows, $gap) {
+  display: grid;
+  grid-template-columns: $columns;
+  grid-template-rows: $rows;
+  gap: $gap;
+}
+
+@mixin container {
+  display: flex;
+  width: 100rem;
+  max-width: 100%;
+  margin: auto;
+}
+
+@mixin span {
+  font-weight: 600;
+  color: var(--azul-medio);
+}
+
+@mixin button {
+  background-color: var(--amarelo-botao);
+  font-size: 1.92rem;
+  font-weight: 700;
+  align-self: center;
+  padding: 1.28rem 2rem;
+  border-radius: 3rem;
+  border: solid var(--marrom-botao);
+  border-width: 0.2rem 0.4rem 0.4rem 0.2rem;
+  cursor: pointer;
+
+  &:hover {
+    border-width: 0.3rem;
+  }
+
+  @media screen and (max-width:367px){
+    font-size: 1.6rem;
+  }
+}

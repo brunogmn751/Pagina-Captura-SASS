@@ -1,0 +1,28 @@
+@use "../abstracts/mixins";
+
+.quem {
+  @include mixins.section;
+  background-image: url("../images/bg_quem.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 0;
+  margin-top: -2rem;
+  
+  &__container {
+    @include mixins.container;
+    justify-content:space-between;
+    gap:3rem;
+
+    @media screen and (max-width:771px){
+    flex-flow:column;
+    justify-content:center;
+    align-items:center;
+    gap: 2rem;
+  }
+  }
+
+  &__imagem {
+    max-width:100%;
+    width: 45rem;
+  }
+}

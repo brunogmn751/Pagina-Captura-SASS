@@ -1,0 +1,18 @@
+@use "base/reset";
+@use "base/base";
+
+@use "abstracts/mixins";
+@use "abstracts/variables";
+
+@use "components/caixa-jornada";
+@use "components/secao-disclaimer";
+@use "components/caixa-passos";
+@use "components/caixa-aprender";
+@use "components/caixa-quem";
+@use "components/popup";
+
+@use "layout/section-jornada";
+@use "layout/section-passos";
+@use "layout/section-aprender";
+@use "layout/section-quem";
+@use "layout/footer.scss";

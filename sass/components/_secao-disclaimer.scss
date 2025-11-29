@@ -1,0 +1,16 @@
+ @use "../abstracts/mixins";
+
+.disclaimer{
+@include mixins.section;
+padding: 3.12rem 2rem;
+background-color: var(--cinza-disclaimer);
+
+&__container{
+    @include mixins.container;
+}
+
+&__texto{
+    font-size: 1.33rem;
+    line-height: 1.5;
+}
+}

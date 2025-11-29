@@ -1,0 +1,42 @@
+@use "../abstracts/mixins";
+
+.passos {
+  @include mixins.section;
+
+  &__div-titulo {
+    @include mixins.flex(start, center, row, 2rem);
+  }
+
+  &__titulo{
+    font-size: 4.78rem;
+    font-weight: 400;
+  }
+
+  &__titulo--azul{
+    @include mixins.span;
+  }
+
+  @media screen and (max-width:771px){
+    &__div-titulo {
+    gap:0rem;
+  }
+   
+    &__titulo {
+    font-size: 3.32rem;
+  }
+
+  &__seta{
+    transform: scale(0.6);
+  }
+  }
+}
+
+.container--passos {
+  @include mixins.container;
+  flex-flow: column;
+  gap: 6rem;
+
+  @media screen and (max-width:480px){
+    gap: 3rem;
+  }
+}

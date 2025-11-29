@@ -1,0 +1,50 @@
+@use "../abstracts/mixins";
+
+.aprender {
+  @include mixins.section;
+
+  &__div-titulo {
+    @include mixins.flex(start, center, row, 2rem);
+  }
+
+  &__titulo {
+    font-size: 4.78rem;
+    font-weight: 400;
+  }
+
+  &__titulo--azul {
+    @include mixins.span;
+  }
+
+  &__botao {
+    @include mixins.button;
+  }
+
+  &__seta{
+    transform: rotate(90deg);
+  }
+
+  @media screen and (max-width:771px){
+    &__div-titulo {
+    gap: 1rem;
+  }
+   
+    &__titulo {
+    font-size: 3.32rem;
+  }
+
+  &__seta{
+    transform: rotate(90deg) scale(0.6);
+  }
+  }
+}
+
+.container--aprender {
+  @include mixins.container;
+  flex-flow: column;
+  gap: 6rem;
+
+  @media screen and (max-width:480px){
+    gap: 4rem;
+  }
+}

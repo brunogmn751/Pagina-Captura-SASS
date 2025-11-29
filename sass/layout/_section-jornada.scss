@@ -1,0 +1,25 @@
+@use "../abstracts/mixins";
+
+.jornada {
+  @include mixins.section;
+  background-image: url("../images/bg_codigo.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 0;
+  background-position: 50%
+}
+
+.container--jornada{
+  @include mixins.container;
+  align-items:center;
+
+  
+  @media screen and (max-width:771px){
+    flex-flow:column;
+    justify-content:center;
+    align-items:center;
+    gap: 2rem;
+  }
+}
+
+

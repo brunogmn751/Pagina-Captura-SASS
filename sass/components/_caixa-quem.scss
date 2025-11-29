@@ -1,0 +1,32 @@
+@use "../abstracts/mixins";
+
+.caixa-quem{
+    @include mixins.flex(center, start, column, 3rem);
+    width: 55rem;
+    max-width:100%;
+    color:white;
+    padding-top: 5rem;
+    
+
+    &__subtitulo{
+        font-size: 2.3rem;
+        padding-left: 1.5rem;
+        border-left: solid 3px var(--amarelo);
+        line-height: 1.2;
+    }
+
+    &--amarelo{
+        color: var(--amarelo);
+    }
+
+    &__div{
+         @include mixins.flex(start, stretch,column, 1.5rem);
+    }
+
+    &__texto{
+        font-size:1.6rem;
+        line-height:1.4;
+        font-weight:400;
+    }
+
+}

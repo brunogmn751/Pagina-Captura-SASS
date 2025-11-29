@@ -1,0 +1,26 @@
+@use "../abstracts/mixins";
+
+.caixa-aprender{
+    @include mixins.reset;
+    @include mixins.grid(repeat(2, 1fr), repeat(2, 1fr), 3rem);    
+
+    &__thumbnail{
+        width:100%;
+        border-radius:2rem;
+        transition: ease-in 0.2s;
+
+        &:hover {
+            transform:scale(1.05);
+        }
+    }
+
+    @media screen and (max-width:480px){
+    @include mixins.grid(1fr, repeat(4, 1fr), 3rem);  
+    
+
+     &__link{
+        justify-self:center;
+        width:90%;
+        }
+    }
+  }

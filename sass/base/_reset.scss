@@ -1,0 +1,21 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  color: var(--preto);
+   font-family: "Montserrat", sans-serif;
+   line-height: 1.0;
+
+}
+
+@media screen and (max-width: 993px){
+html {font-size: 56%;}
+}
+
+@media screen and (max-width: 893px){
+html {font-size: 50%;}
+}
